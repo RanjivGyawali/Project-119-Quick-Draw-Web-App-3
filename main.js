@@ -66,8 +66,5 @@ function gotResult(error, results) {
     console.log(results);
     drawn_sketch = results[0].label;
     document.getElementById('your_sketch').innerHTML = 'Your Sketch: ' + drawn_sketch;
-    document.getElementById('your_sketch').innerHTML = 'Label: '+results[0].label;
     document.getElementById('confidence').innerHTML = 'Confidence: '+Math.round(results[0].confidence*100)+'%';
-    utterThis = new SpeechSynthesisUtterance(results[0].label);
-    synth.speak(utterThis);
 }
